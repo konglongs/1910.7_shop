@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use DB;
 use App\Model\User;
+use Illuminate\Support\Facades\Redis;
 use Validator;
 
 class UserController extends Controller
@@ -99,4 +100,12 @@ class UserController extends Controller
             echo "欢迎".$session['name']."登录";
         }
     }
+
+    public function test(){
+
+        Redis::set("name","kwl");
+
+        echo "123";
+    }
+
 }

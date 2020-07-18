@@ -20,5 +20,6 @@ Route::post('/user/regs','User\UserController@regs');
 Route::get('/user/login','User\UserController@login');
 Route::post('/user/logins','User\UserController@logins');
 Route::get('/user/list','User\UserController@list');
+Route::get('/user/test','User\UserController@test');
 
 
