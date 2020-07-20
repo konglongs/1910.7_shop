@@ -8,6 +8,7 @@ use DB;
 use App\Model\User;
 use Illuminate\Support\Facades\Redis;
 use Validator;
+use Illuminate\Support\Facades\Cookie;
 
 class UserController extends Controller
 {
@@ -78,6 +79,7 @@ class UserController extends Controller
                     'name'=>$post['u_name'],
                     'time'=>time()
                 ];
+                Cookie('userinfo');
                 session(['userinfo'=>$data]);
 
                 return redirect('/user/list');
